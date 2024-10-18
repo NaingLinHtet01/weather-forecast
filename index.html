@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Project</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/output.css">
+    <script src="./scripts/app.js" defer></script>
+</head>
+<body class="h-screen default lg:bg-no-repeat bg-cover body-container">
+    <div>
+        <!-- Top Part Of The Web -->
+        <div class="grid grid-cols-1 md:grid-cols-3 py-3 px-6">
+            <div class="md:col-span-2 p-3 text-lg text-style-shadow">Weather API Test Project</div>
+            <!-- Search Bar -->
+            <div class="flex overflow-hidden">
+                <input type="text" placeholder="Enter a city name..."
+                class="city-input w-full outline-none placeholder-gray-200 text-sky-50 text-style-shadow px-4 py-3 bg-inherit border-b-2"/>
+                <button type='button' class="search-btn flex items-center justify-center bg-[#212121] px-5 rounded-lg text-white hover:bg-white hover:text-black transition-all ease-in-out">
+                    Search
+                </button>
+            </div>
+        </div>
+        
+        <!-- Weather Data Display Area -->
+        <div class="grid lg:grid-cols-3 hide">
+            <!-- Left Side in Lg Screen -->
+            <div class="lg:col-span-2">
+                <!-- Date & Time -->
+                 <div class="flex justify-between px-8 py-5 text-lg lg:text-2xl">
+                    <span class="date text-style-shadow"></span>
+                 </div>
+                 <!-- City Name -->
+                 <div class="px-8 text-3xl lg:text-5xl mt-3 flex items-center gap-2">
+                    <img src="./assests/images/icon/city.svg" alt="City Icon" class="w-12">
+                    <h1 class="city text-style-shadow">Welcome!</h1>
+                 </div>
+                 <!-- Temp and br nyar br nyar pics -->
+                 <div class="flex justify-evenly mt-20 gap-2 items-center px-3 temp-container hide-this">
+                        <img src="./assests/images/weather/rain-day.svg" alt="weather" class="condition-img size-40 md:size-72">
+                        <div class="flex flex-col gap-3">
+                            <div class="flex justify-between">
+                                <img src="./assests/images/weather/Temp.svg" alt="Temperature" class="size-10">
+                                <h1 class="text-4xl lg:text-5xl text-center text-style-shadow"><span class="temp">20</span> &deg;C</h1>
+                            </div>
+                            <h1 class="condition text-3xl text-center text-style-shadow">Raining</h1>
+                        </div>
+                 </div>
+                 <!-- Other Data -->
+                  <div class="lg:flex lg:justify-evenly lg:mt-10 otherdata-container hide-this">
+                    <div class="flex text-2xl lg:text-3xl gap-2 mt-12 px-8">
+                      <img src="./assests/images/weather/Humidity.svg" alt="Humidity" class="size-8">
+                      <h1 class="text-style-shadow">Humidity : <span class="humidity text-style-shadow">50%</span></h1>
+                    </div>
+                    <div class="flex text-2xl lg:text-3xl gap-2 mt-12 px-8">
+                      <img src="./assests/images/weather/Windspeed.svg" alt="Windspeed" class="size-8">
+                      <h1 class='text-style-shadow'>Wind Speed : <span class="windspeed text-style-shadow">10</span></h1>
+                    </div>
+                  </div>
+
+            </div>
+
+            <!-- Right Side in Lg Screen -->
+            <div class="lg:col-span-1 bg-white-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 hide-this right-side-container">
+                <div class="forecast-container grid grid-cols-1 mt-20">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
