@@ -12,3 +12,6 @@
   <li>Functional</li>
   <li>But No Fancy Visual Effects</li>
 </ul>
+<hr>
+<h1>Live Demo</h1>
+<a href="https://nainglinhtet01.github.io/weather-forecast/">Weather Forcast</a>
